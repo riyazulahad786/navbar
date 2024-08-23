@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+
+      <nav class="navbar">
+
+       <div class="logo">Restaurant</div>
+
+        <ul class="menu_link">
+                 <span id="close_menu_btn" class="materail-symbols-outlined"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABN0lEQVR4nO3ZTWrDMBCG4fcoXfQkLZTuK83CSc6eRc8QAk0hJWBDMTFxJM1oLPRBdsYzj34S2YGenp6e1vIKhIr1w9hDVl6AI/ALHLCPABfgOwczIa7jxxojI2Kqn4yJY/PXGWaHfnYLtW89FRkVi5kRrZqWGNGuZYExGzDNQuZLWBQK1tiHxQtXQ5RsoDqiRCNuEDkNuUOkNOYW8UyD7hFrGt0M4tFhr9bhMyv3Rn8zM7EWsylEMxBpYWkNLWx2aeHrNy40uv93jXtMXIFwj4lPINxiYgLCHSZkINxgQgFEdUxYKJzzm2COCQoIc0xQRJhhAvBjdMQQLczXAuJ2ptKKlMbcW06XnFf7BZ40h5SbfQBnw5mYZz4zJ+A99WYTxhoxx2QhpnxW/jN0AN4q1u/p6emhfP4AxlR3VfJGRpkAAAAASUVORK5CYII="></span>
+                <li class="#"><a href="#">Home</a></li>
+                <li class="#"><a href="#">About</a></li>
+                <li class="#"><a href="#">Service</a></li>
+                <li class="#"><a href="#">Order</a></li>
+                <li class="#"><a href="#">Products</a></li>
+                <li class="#"><a href="#">Order</a></li>
+        </ul>
+        <span id="menu_btn" class="materail-symbols-outlined"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nO3TsREAMAwCMe+/NJnCwYV0R/8NM8BBWd79ACDtG6YdAKR9w7QDgPnpAfOlj3FVlUETAAAAAElFTkSuQmCC"></span>
+
+
+      </nav>
+
+    </header>
+    <!-- banner -->
+
+
+     <div class="banner-section">
+          <div class="content">
+               <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+               <p> Amet nihil sint ab
+                ut obcaecati voluptas sit,
+                aliquam aut quis cum nobis beatae tempore libero. Autem, commodi libero? Error, praesentium voluptatem.</p>
+
+                <button>Order Now</button>
+          </div>
+     </div>
+     <script>
+      const header = document.querySelector("header");
+        const menubtn = document.querySelector("#menu_btn");
+        const closebtn = document.querySelector("#close_menu_btn");
+        const menuLink = document.querySelector(".menu_link");
+
+        menubtn.addEventListener("click", () => {
+            header.classList.toggle("show-menu");
+            menuLink.style.left = "0";  // Make sure the menu is visible when clicked
+        });
+
+        closebtn.addEventListener("click", () => {
+            header.classList.toggle("show-menu");
+            menuLink.style.left = "-250px";  // Hide the menu when close button is clicked
+        });
+     </script>
+  </body>
+
+</html>

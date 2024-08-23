@@ -1,0 +1,118 @@
+header {
+  width: 100%; /* Sets the container's width */
+  margin: 0 auto; /* Centers the container horizontally */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 30px;
+}
+.logo {
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 22px 8px;
+}
+ul li {
+  list-style: none;
+}
+ul {
+  display: flex;
+  gap: 22px;
+}
+* {
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navbar li {
+  transition: 0.2s ease;
+}
+.navbar li:hover {
+  color: yellow;
+}
+.banner-section {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/house.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-section .content {
+  max-width: 1200px;
+  padding: 8px;
+}
+button {
+  background: orange;
+  padding: 8px 8px;
+  margin-top: 12px;
+  border-radius: 12px 12px 8px 0px;
+  font-weight: 800;
+}
+.banner-section .content h2 {
+  max-width: 600px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+#menu_btn {
+  color: white;
+}
+#close_menu_btn {
+  display: none;
+}
+/* header */
+@media (max-width: 768px) {
+  .navbar .menu_link {
+    height: 100vh;
+    background: rgb(34, 34, 34);
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 250px;
+    flex-direction: column;
+    padding: 50px 20px 0px;
+    transition: left 0.2s ease;
+    color: white;
+  }
+  .menu_link:hover {
+    color: aquamarine;
+  }
+
+  #close_menu_btn {
+    position: absolute;
+    right: 21px;
+    top: 17px;
+  }
+  /* Add these adjustments to your existing CSS */
+  header .navbar .menu_link {
+    left: -250px; /* Initially hide the menu offscreen */
+    transition: left 0.2s ease; /* Smooth transition for menu sliding */
+  }
+
+  header.show-menu .menu_link {
+    left: 0; /* Show the menu when the header has the class "show-menu" */
+  }
+
+  header.show-menu #menu_btn {
+    display: none; /* Hide the menu button when the menu is open */
+  }
+
+  header.show-menu #close_menu_btn {
+    display: block; /* Show the close button when the menu is open */
+  }
+}
